@@ -17,7 +17,7 @@
 			<ul class="contents_top">
 				<li><a href="/products/list.do">상품 목록</a></li>
 				<li><a href="/products/add.do">상품 등록</a></li>
-				<li><a href="/products/update.do?productnum=${product.productNum }">정보 수정</a></li>
+				<li><a href="/products/update.do?productnum=${product.productNum }&&productrate=${product.productRate}&&productdetail=${product.productDetail}">정보 수정</a></li>
 				<li><a href="/accounts/add.do?productnum=${product.productNum }">가입하기</a></li>
 			</ul>
 

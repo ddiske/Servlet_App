@@ -22,16 +22,16 @@
 		</nav>
 	</div>
 	<div class="contents_main">
-		<form action="./update.do" method="post">
+		<form action="./update.do?productnum=${pageScope.product.productNum }&&productrate=${pageScope.product.productRate}&&productdate=${pageScope.product.productDate}" method="post">
 			<h3>상품 이율 : 
-				<input type="text" name="productrate" value="${product.productRate}">
+				<input type="text" name="productrate" value="${param.productrate}">
 			</h3>
 			<br>
 			<h3>상품 상세정보 : 
-				<input type="text" name="productdetail" value="${product.productDetail }">
+				<input type="text" name="productdetail" value="${requestScope.productdetail }">
 			</h3>
 			<br>
-			<input type="hidden" name="productnum" value="${product.productNum }">
+			<input type="hidden" name="productnum" value="${requestScope.productnum }">
 			<button type="submit">수정하기</button>
 		</form>
 	</div>

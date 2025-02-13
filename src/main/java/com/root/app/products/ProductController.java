@@ -62,7 +62,10 @@ public class ProductController extends HttpServlet {
 				if(method.equalsIgnoreCase("post")) {
 					productService.updateProcess(request, actionForward);
 				}else {
-					productService.update(request, actionForward);
+					
+					actionForward.setFlag(true);
+					actionForward.setPath("/WEB-INF/views/products/update.jsp");
+					
 				}
 				break;
 			}
